@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You be my Valentine</title>
+</head>
+<style>
+    #yes{
+        transition: transform 0.1s
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    
+    }
+    .btns{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn{
+        font-size: 15px;
+    }
+
+
+
+</style>
+<body>
+    <div class="main">
+        <p>Will you be my valentine</p>
+        <div class="btns">
+            <div>
+                <a href="./yes.html">
+                    <button id="yes" class="btn">YES</button>
+                </a>   
+                
+            </div>
+            <div>   
+                <button id="no">NO</button>
+            </div>
+            
+        </div>
+       
+    </div>
+</body>
+<script>
+
+   
+
+
+
+    const tamil = ["Are you serious ??", "Adinguuu Avatar Kutty","ennaku unnaya vitta yaaru irrukaa","Ego kaatriya ?", "purinjiko dude","oosu ah di nii , hair eh","kannu munnadi vanthu veluthirvae"]
+    
+    const yes = document.getElementById('yes');
+    const no = document.getElementById('no');
+    let width = 60;  
+    let height = 50;  
+    let scale = 1.5;
+    let font = 15;
+    let i =0;
+
+    no.addEventListener('click', () => {
+        // yes.style.transform = `scale(${scale})`;
+        // scale += 0.5;
+        yes.style.width = width + "px";
+        width += 50
+        yes.style.height = height + "px";
+        height += 50;
+        yes.style.fontSize = font + "px";
+        font+=20;
+        no.innerHTML = tamil[i%7];
+        i++;
+        
+    });
+   
+</script>
+
+
+
+</html>
